@@ -1,6 +1,6 @@
 <idea-plugin>
-    <id>com.xinchentechnote.fin.protoc</id>
-    <name>fin-protoc-plugin</name>
+    <id>com.xinchentechnote.packetdsl</id>
+    <name>Packet DSL Support</name>
     <vendor email="283235702@qq.com">xinchen</vendor>
     <version>0.1.0</version>
     <description>A simple Hello World plugin</description>
@@ -15,4 +15,12 @@
             <add-to-group group-id="ToolsMenu" anchor="last"/>
         </action>
     </actions>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- 文件类型 -->
+        <fileType implementationClass="com.xinchentechnote.packetdsl.PacketDslFile" name=""/>
+        <!-- ParserDefinition -->
+        <lang.parserDefinition language="PacketDsl"
+                               implementationClass="com.xinchentechnote.packetdsl.PacketDslParserDefinition"/>
+    </extensions>
 </idea-plugin>
